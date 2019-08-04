@@ -1,65 +1,44 @@
 Spring MVC Web Request Data
 =====================
 
-Spring MVC Web Request Data Validation  
+Spring MVC Web Request Data Processing  
 
 
-### Steps
+### Speps
 
-- Create Controller with @Controller annotation
-- Request mapping with @RequestMapping annotation
-- Create jsp page with input form 
-- Inject HttpServletRequest and Model 
-- Retrive the request parameter value
-- Add Model attribute
-- Render the model data to jsp page
+- Reading Request Data
+- Binding Request Parameter
 
 
 
-#### Create Controller with @Controller annotation
 
-```
-@Controller
-public class RequestController {
-
-}
-```
-
-
-#### Request mapping with @RequestMapping annotation
-
-
-```
-@RequestMapping("/readingFormData")
-public String readingFormData() {
-	return "reading-form-data";
-}
-
-```
-
-
-#### Inject HttpServletRequest and Model 
-
+#### Reading Request Data
 
 ```
 @RequestMapping("submitReadingFormData")
 public String readingSubmittedFromData(HttpServletRequest request, Model model) {
 
+	/* 
+	* Read the Request parameter
+	*/		
+	String firstName = request.getParameter("firstName");
+	String lastName = request.getParameter("lastName");
+}
+```
+
+
+#### Binding Request Parameter
+
+
+```
+@RequestMapping("submitBindingFormData")
+public String submitBindingFormData(
+		@RequestParam("firstName") String firstName, 
+		@RequestParam("lastName") String lastName, 
+		Model model) {
+
 }
 
 ```
 
 
-#### Retrive the request parameter value and add to Model attribute
-
-
-```
-		model.addAttribute("firstName", request.getParameter("firstName"));
-```
-
-#### Render Model data in jsp
-
-```
-	<p>First Name: ${firstName}</p>
-	<p>Last Name: ${lastName}</p>	
-```
