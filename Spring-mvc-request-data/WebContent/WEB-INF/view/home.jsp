@@ -11,6 +11,8 @@
 <h1>Play with Spring MVC Request data</h1>
 
 <a href="readingFormData">Reading form Data</a>
+<br>
+<a href="bindingFormData">Binging Request Parameter</a>
 
 </body>
 </html>

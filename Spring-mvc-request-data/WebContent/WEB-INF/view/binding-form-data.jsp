@@ -4,13 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>${messageHeader}</title>
+<title>Binding form Data</title>
 </head>
 <body>
 
-	<h1>${messageHeader}</h1>
-	<p>First Name: ${firstName}</p>
-	<p>Last Name: ${lastName}</p>	
-	<p><a href="${pageContext.request.contextPath}">Back to main menu</a></p>
+	<h1>Binding Request Data</h1>
+	<form action="submitBindingFormData" method="post">
+		<input type="text" placeholder="First Name" name="firstName" />
+		<input type="text" placeholder="Last Name" name="lastName" />
+		<input type="submit" value="Submit" />
+	</form>
+	
 </body>
 </html>
