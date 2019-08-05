@@ -8,6 +8,7 @@ Spring MVC Web Request Data Processing
 
 - Reading Request Data
 - Binding Request Parameter
+- Model Attribute request data binding
 
 
 
@@ -41,4 +42,25 @@ public String submitBindingFormData(
 
 ```
 
+
+#### Model Attribute request data binding
+
+Binding the Model
+
+```
+@RequestMapping("modelDataBinding")
+public String modelDataBinding(Model model) {
+	model.addAttribute("contactInformation", new ContactInformation());
+	return "model-attribute-data-binding";
+}
+```
+
+Inject the Request Data binding with Model
+
+```
+@RequestMapping("submitModelDataBinding")
+public String submitModelDataBinding(@ModelAttribute("contactInformation") ContactInformation information) {
+
+}		
+```
 
