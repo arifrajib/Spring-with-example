@@ -4,17 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Spring MVC Request Data</title>
+<title>${message}</title>
 </head>
 <body>
 
-<h1>Play with Spring MVC Request data</h1>
-
-<a href="readingFormData">Reading form Data</a>
-<br>
-<a href="bindingFormData">Binging Request Parameter</a>
-<br>
-<a href="modelDataBinding">Model Attribute from data Binding</a>
-
+	<h1>${message}</h1>
+	<p>First Name: ${contactInformation.firstName}</p>
+	<p>Last Name: ${contactInformation.lastName}</p>	
+	<p><a href="${pageContext.request.contextPath}">Back to main menu</a></p>
 </body>
 </html>

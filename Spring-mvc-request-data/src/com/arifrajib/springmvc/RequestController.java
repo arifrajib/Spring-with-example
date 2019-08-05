@@ -4,8 +4,11 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.arifrajib.springmvc.model.ContactInformation;
 
 @Controller
 public class RequestController {
@@ -74,5 +77,24 @@ public class RequestController {
 		model.addAttribute("lastName", lastName);
 		
 		return "render-reading-form-data";
+	}
+	
+	/**
+	 * Model Data Binding
+	 * @return
+	 */
+	@RequestMapping("modelDataBinding")
+	public String modelDataBinding(Model model) {
+		model.addAttribute("contactInformation", new ContactInformation());
+		return "model-attribute-data-binding";
+	}
+	
+	
+	@RequestMapping("submitModelDataBinding")
+	public String submitModelDataBinding(@ModelAttribute("contactInformation") ContactInformation information, Model model) {
+		
+		System.out.println(information.getFirstName()+" --> "+information.getLastName());
+		model.addAttribute("message", "Model Attribute and request data binding");
+		return "render-model-attribute";
 	}
 }

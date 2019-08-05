@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Reading form Data</title>
+<title>Model Attribute Data Binding</title>
 </head>
 <body>
 
-	<h1>Reading contact form Data</h1>
-	<form action="submitReadingFormData" method="post">
+	<h1>Model Attribute Data Binding</h1>
+	<form action="submitModelDataData" method="post">
 		<input type="text" placeholder="First Name" name="firstName" />
 		<input type="text" placeholder="Last Name" name="lastName" />
 		<input type="submit" value="Submit" />
