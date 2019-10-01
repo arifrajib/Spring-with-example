@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Add Property -->
+	<context:property-placeholder location="classpath:env.properties"/>
+
+	<!-- washing service bean -->
+	<bean id="washService" 
+			class="com.arifrajib.springcorexml.washer.XyzWasherService">
+			<!-- Set Properties -->
+			<property name="brand" value="${washer.name}"/>
+	</bean>
+			
+	<!-- drying service bean -->
+	<bean id="dryerService" 
+			class="com.arifrajib.springcorexml.dryer.MnoDryerService">
+			<property name="brand" value="${dryer.name}" />
+	</bean>
+	
+	<!-- laundry service with Dependency Injection -->
+	<bean id="laundry"
+			class="com.arifrajib.springcorexml.laundry.AbcLaundryService"
+			init-method="welcomeMessage"
+			destroy-method="thanksMessage">
+			
+			<!-- Constructor Injection -->
+			<constructor-arg ref="washService" />
+			
+			<!-- Setter Injection -->
+			<property name="drayerService" ref="dryerService" />
+			
+	</bean>
+
+</beans>
