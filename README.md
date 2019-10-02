@@ -17,5 +17,5 @@ Learn Spring with example
 
 **Spring Configuration**
 
-- [Spring Configuration](https://github.com/arifrajib/Spring-with-example/)：Spring Bean Configuration with XML
-- [Spring Configuration](https://github.com/arifrajib/Spring-with-example/)：Spring Bean Configuration with XML and Component scan
+- [Spring Configuration](https://github.com/arifrajib/Spring-with-example/tree/master/Spring-core-xml-configuration)：Spring Bean Configuration with XML
+
