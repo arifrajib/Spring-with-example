@@ -7,9 +7,9 @@ Learn Spring with example
 ## Setup Eclipse Project
 
 * Create New Java project
-* Craete libs directory and add dependent Libery, Spring framework jar
-* Copy all dependent Spring jar to the directory 
-* Add External Jar, Project --> property --> Java Build Path --> Add External Libraries
+* Java Settings, Libraries 
+* Add External Jar  
+* Select All of the Jar files downloaded from Spring repository
 
 
 
@@ -17,3 +17,5 @@ Learn Spring with example
 
 **Spring Configuration**
 
+- [Spring Configuration](https://github.com/arifrajib/Spring-with-example/)：Spring Bean Configuration with XML
+- [Spring Configuration](https://github.com/arifrajib/Spring-with-example/)：Spring Bean Configuration with XML and Component scan
