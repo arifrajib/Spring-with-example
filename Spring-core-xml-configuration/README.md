@@ -4,7 +4,7 @@ Spring Core with XML Configuration
 Spring Core, Bean configuration and dependency injection with XML 
 
 
-## Topics Cover
+## Topics Covered
 
 - Inversion of control (IoC)
 - Initialization Callbacks
