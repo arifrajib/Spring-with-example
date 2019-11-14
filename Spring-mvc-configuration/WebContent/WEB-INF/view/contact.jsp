@@ -8,7 +8,8 @@
 </head>
 <body>
 
-<h1>Welcome to home page</h1>
+<h1>Welcome to Contact Us page</h1>
+<p>${message}</p>
 
 <a href="${pageContext.request.contextPath}">Home</a>
 <br>
