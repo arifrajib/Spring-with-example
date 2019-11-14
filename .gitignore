@@ -2,7 +2,8 @@
 .project
 .settings/
 .springBeans
-.jar
+*.jar
 target/
 bin/
+build/
 

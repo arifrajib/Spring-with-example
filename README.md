@@ -20,4 +20,5 @@ Learn Spring with example
 - [Spring Configuration](https://github.com/arifrajib/Spring-with-example/tree/master/Spring-core-xml-configuration)：Spring Bean Configuration with XML
 - [Spring Configuration Component scan](https://github.com/arifrajib/Spring-with-example/tree/master/Spring-core-xml-config-component-scan)：Spring Bean Configuration with XML and Component scan
 - [Spring Configuration with Java code](https://github.com/arifrajib/Spring-with-example/tree/master/Spring-core-java-config)：Spring Bean Configuration with Java Code and Component scan
+- [Spring MVC Configuration](https://github.com/arifrajib/Spring-with-example/tree/master/Spring-mvc-configuration)：Spring MVC Configuration with Component scan
 
